@@ -13,6 +13,7 @@ body {
   background-color: hsl(210deg, 60%, 98%);
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 14px;
+  color: hsl(224deg, 21%, 14%);
 }
 
 .notification-container {
@@ -84,6 +85,10 @@ body {
   transform: scale(0.5);
   color: hsl(1deg, 90%, 64%);
 }
+.body .notification .message--container .group-type {
+  color: hsl(219deg, 85%, 26%);
+  font-weight: bold;
+}
 .body .notification .message--container .message {
   margin-top: 10px;
   padding: 15px;
@@ -93,7 +98,13 @@ body {
 .body .notification .message--container .content, .body .notification .message--container .message, .body .notification .message--container .time {
   color: hsl(219deg, 12%, 42%);
 }
-.body .notification .message--container .content, .body .notification .message--container .action {
+.body .notification .message--container .action {
+  color: hsl(219deg, 12%, 42%);
+}
+.body .notification .message--container .action:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.body .notification .message--container .content, .body .notification .message--container .action, .body .notification .message--container .group-type {
   padding-left: 2px;
 }
 .body .notification .refer {
@@ -111,7 +122,7 @@ body {
   display: none;
 }
 
-.name:hover, .action:hover {
+.name:hover, .action:hover, .group-type:hover {
   color: hsl(219deg, 85%, 26%);
   cursor: pointer;
 }
@@ -128,4 +139,5 @@ body {
 .body .refer img:hover {
   border: 2px solid hsl(211deg, 68%, 94%);
   cursor: pointer;
+  border-radius: 10px;
 }/*# sourceMappingURL=styles.css.map */
