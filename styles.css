@@ -53,12 +53,13 @@ body {
 .notification-container .header .title {
   font-weight: bold;
 }
-.notification-container .body {
+
+.body {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.notification-container .body .notification {
+.body .notification {
   display: inherit;
   flex-direction: row;
   gap: 20px;
@@ -66,36 +67,39 @@ body {
   padding: 10px 20px 10px;
   border-radius: 15px;
 }
-.notification-container .body .notification .profile--pic img {
+.body .notification .profile--pic img {
   height: 40px;
 }
-.notification-container .body .notification .message--container p {
+.body .notification .message--container p {
   display: inline;
   padding-top: 5px;
 }
-.notification-container .body .notification .message--container .time {
+.body .notification .message--container .time {
   display: block;
 }
-.notification-container .body .notification .message--container .name, .notification-container .body .notification .message--container .action {
+.body .notification .message--container .name, .body .notification .message--container .action {
   font-weight: bold;
 }
-.notification-container .body .notification .message--container i {
+.body .notification .message--container i {
   transform: scale(0.5);
   color: hsl(1deg, 90%, 64%);
 }
-.notification-container .body .notification .message--container .message {
+.body .notification .message--container .message {
   margin-top: 10px;
   padding: 15px;
   border-radius: 4px;
   border: 1px solid hsl(205deg, 33%, 90%);
 }
-.notification-container .body .notification .message--container .content, .notification-container .body .notification .message--container .message, .notification-container .body .notification .message--container .time {
+.body .notification .message--container .content, .body .notification .message--container .message, .body .notification .message--container .time {
   color: hsl(219deg, 12%, 42%);
 }
-.notification-container .body .notification .refer {
+.body .notification .message--container .content, .body .notification .message--container .action {
+  padding-left: 2px;
+}
+.body .notification .refer {
   margin-left: auto;
 }
-.notification-container .body .notification .refer img {
+.body .notification .refer img {
   height: 40px;
 }
 
@@ -119,4 +123,9 @@ body {
 
 .message:hover {
   background-color: hsl(211deg, 68%, 94%);
+}
+
+.body .refer img:hover {
+  border: 2px solid hsl(211deg, 68%, 94%);
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

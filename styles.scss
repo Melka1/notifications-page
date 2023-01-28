@@ -65,60 +65,58 @@ body {
         }
 
     }
-    .body {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        .notification {
-            //background-color: $Light-grayish-blue-1;
-            display: inherit;
-            flex-direction: row;
-            gap: 20px;
-            align-items: flex-start;
-            padding: 10px 20px 10px;
-            border-radius: 15px;
-            .profile--pic {
-                img {
-                    height: 40px;
-                    &:hover {
-                        cursor: pointer;
-                        border: 2px solid $Light-grayish-blue;
-                    }
-                }
+    
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .notification {
+        //background-color: $Light-grayish-blue-1;
+        display: inherit;
+        flex-direction: row;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 10px 20px 10px;
+        border-radius: 15px;
+        .profile--pic {
+            img {
+                height: 40px;
             }
-            .message--container p {
-                display: inline;
-                padding-top: 5px;
+        }
+        .message--container p {
+            display: inline;
+            padding-top: 5px;
+        }
+        .message--container {
+            .time {
+                display: block;
             }
-            .message--container {
-                .time {
-                    display: block;
-                }
-                .name, .action {
-                    font-weight: bold;
-                }
-                i{
-                    transform: scale(0.5);
-                    color: $Red;
-                }
-                .message {
-                    margin-top: 10px;
-                    padding: 15px;
-                    border-radius: 4px;
-                    border: 1px solid $Light-grayish-blue-2;
-                }
-                .content, .message, .time {
-                    color: $Dark-grayish-blue;
-                }
-                .content, .action {
-                    padding-left:8px;
-                }
+            .name, .action {
+                font-weight: bold;
             }
-            .refer {
-                margin-left: auto;
-                img{
-                    height: 40px;
-                }
+            i{
+                transform: scale(0.5);
+                color: $Red;
+            }
+            .message {
+                margin-top: 10px;
+                padding: 15px;
+                border-radius: 4px;
+                border: 1px solid $Light-grayish-blue-2;
+            }
+            .content, .message, .time {
+                color: $Dark-grayish-blue;
+            }
+            .content, .action {
+                padding-left:2px;
+            }
+        }
+        .refer {
+            margin-left: auto;
+            img{
+                height: 40px;
             }
         }
     }
@@ -143,7 +141,7 @@ body {
     background-color: $Light-grayish-blue-1;
 }
 
-.refer img:hover {
-    border: 2px solid $Light-grayish-blue;
+.body .refer img:hover {
+    border: 2px solid $Light-grayish-blue-1;
     cursor:pointer;
 }
