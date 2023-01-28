@@ -1,0 +1,149 @@
+$white: hsl(0, 0%, 100%);
+$Very-light-grayish-blue: hsl(210, 60%, 98%);
+$Light-grayish-blue-1: hsl(211, 68%, 94%);
+$Light-grayish-blue-2: hsl(205, 33%, 90%);
+$Grayish-blue: hsl(219, 14%, 63%);
+$Dark-grayish-blue: hsl(219, 12%, 42%);
+$Very-dark-blue: hsl(224, 21%, 14%);
+$Red: hsl(1, 90%, 64%);
+$Blue: hsl(219, 85%, 26%);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    flex-direction: column;
+    background-color: $Very-light-grayish-blue;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+}
+
+.notification-container {
+    width: 630px;
+    min-width: 50%;
+    // border: 1px solid;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+        *{
+            margin:0;
+            padding:0;
+        }
+        // justify-content: space-between;
+        .status {
+            margin-left: auto;
+            color: $Dark-grayish-blue;
+            font-weight: bold;
+        }
+        .count {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            // border: 1px solid;
+            height: 20px;
+            width:30px;
+            background: hsl(219, 85%, 26%);
+            color: white;
+            font-size: 0.7rem;
+        }
+        .title {
+            font-weight:bold;
+        }
+
+    }
+    .body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .notification {
+            //background-color: $Light-grayish-blue-1;
+            display: inherit;
+            flex-direction: row;
+            gap: 20px;
+            align-items: flex-start;
+            padding: 10px 20px 10px;
+            border-radius: 15px;
+            .profile--pic {
+                img {
+                    height: 40px;
+                    &:hover {
+                        cursor: pointer;
+                        border: 2px solid $Light-grayish-blue;
+                    }
+                }
+            }
+            .message--container p {
+                display: inline;
+                padding-top: 5px;
+            }
+            .message--container {
+                .time {
+                    display: block;
+                }
+                .name, .action {
+                    font-weight: bold;
+                }
+                i{
+                    transform: scale(0.5);
+                    color: $Red;
+                }
+                .message {
+                    margin-top: 10px;
+                    padding: 15px;
+                    border-radius: 4px;
+                    border: 1px solid $Light-grayish-blue-2;
+                }
+                .content, .message, .time {
+                    color: $Dark-grayish-blue;
+                }
+                .content, .action {
+                    padding-left:8px;
+                }
+            }
+            .refer {
+                margin-left: auto;
+                img{
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+
+.unread {
+    background-color: $Light-grayish-blue-1;
+}
+.empty {
+    display: none;
+}
+
+.name:hover, .action:hover {
+    color: $Blue;
+    cursor: pointer;
+}
+.header .status:hover {
+    color: $Blue;
+    cursor: pointer;
+}
+.message:hover {
+    background-color: $Light-grayish-blue-1;
+}
+
+.refer img:hover {
+    border: 2px solid $Light-grayish-blue;
+    cursor:pointer;
+}

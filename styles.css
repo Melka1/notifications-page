@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  flex-direction: column;
+  background-color: hsl(210deg, 60%, 98%);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+}
+
+.notification-container {
+  width: 630px;
+  min-width: 50%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+.notification-container .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.notification-container .header * {
+  margin: 0;
+  padding: 0;
+}
+.notification-container .header .status {
+  margin-left: auto;
+  color: hsl(219deg, 12%, 42%);
+  font-weight: bold;
+}
+.notification-container .header .count {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  height: 20px;
+  width: 30px;
+  background: hsl(219deg, 85%, 26%);
+  color: white;
+  font-size: 0.7rem;
+}
+.notification-container .header .title {
+  font-weight: bold;
+}
+.notification-container .body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.notification-container .body .notification {
+  display: inherit;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 10px 20px 10px;
+  border-radius: 15px;
+}
+.notification-container .body .notification .profile--pic img {
+  height: 40px;
+}
+.notification-container .body .notification .message--container p {
+  display: inline;
+  padding-top: 5px;
+}
+.notification-container .body .notification .message--container .time {
+  display: block;
+}
+.notification-container .body .notification .message--container .name, .notification-container .body .notification .message--container .action {
+  font-weight: bold;
+}
+.notification-container .body .notification .message--container i {
+  transform: scale(0.5);
+  color: hsl(1deg, 90%, 64%);
+}
+.notification-container .body .notification .message--container .message {
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid hsl(205deg, 33%, 90%);
+}
+.notification-container .body .notification .message--container .content, .notification-container .body .notification .message--container .message, .notification-container .body .notification .message--container .time {
+  color: hsl(219deg, 12%, 42%);
+}
+.notification-container .body .notification .refer {
+  margin-left: auto;
+}
+.notification-container .body .notification .refer img {
+  height: 40px;
+}
+
+.unread {
+  background-color: hsl(211deg, 68%, 94%);
+}
+
+.empty {
+  display: none;
+}
+
+.name:hover, .action:hover {
+  color: hsl(219deg, 85%, 26%);
+  cursor: pointer;
+}
+
+.header .status:hover {
+  color: hsl(219deg, 85%, 26%);
+  cursor: pointer;
+}
+
+.message:hover {
+  background-color: hsl(211deg, 68%, 94%);
+}/*# sourceMappingURL=styles.css.map */
